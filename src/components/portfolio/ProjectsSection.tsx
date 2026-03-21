@@ -41,13 +41,13 @@ const projects = [
   {
     num: "07",
     title: "AI Food Nutrition Analyzer",
-    stack: "FastAPI · Gemini 2.0 Flash Vision · AWS EC2 · RDS · Scikit-learn · XGBoost",
+    stack: "FastAPI · Gemini 2.0 Flash Vision · AWS EC2 · RDS · Scikit-learn",
     desc: "Backend for Android app — food image analysis via Gemini Vision AI returning per-dish nutrition breakdowns. 1,000+ daily requests at sub-800ms response time.",
   },
   {
     num: "08",
     title: "ML Prediction & Analytics",
-    stack: "Scikit-learn · XGBoost · Pandas · NumPy · SHAP · Matplotlib · Seaborn · FastAPI",
+    stack: "Scikit-learn · Pandas · NumPy · SHAP · Matplotlib · Seaborn · FastAPI",
     desc: "End-to-end ML workflows: EDA, feature engineering, hyperparameter tuning with GridSearchCV, k-fold cross-validation, and SHAP interpretability for churn prediction & demand forecasting.",
   },
   {
@@ -102,12 +102,13 @@ const ProjectsSection = () => {
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <div key={p.num}
-              className={`group relative p-6 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_-10px_hsl(38_92%_55%/0.15)] ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`group relative p-6 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_-10px_hsl(38_92%_55%/0.15)] hover-lift overflow-hidden ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${(i + 1) * 100}ms` }}>
-              <span className="text-5xl font-bold text-border/60 absolute top-4 right-5 font-mono select-none group-hover:text-primary/20 transition-colors">{p.num}</span>
-              <h3 className="text-lg font-semibold mb-2 pr-12">{p.title}</h3>
-              <p className="text-xs font-mono text-primary/80 mb-3 leading-relaxed">{p.stack}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              <span className="text-5xl font-bold text-border/60 absolute top-4 right-5 font-mono select-none group-hover:text-primary/40 transition-all duration-300 group-hover:animate-scale-fade pointer-events-none">{p.num}</span>
+              <h3 className="text-lg font-semibold mb-2 pr-12 group-hover:text-primary transition-colors duration-300">{p.title}</h3>
+              <p className="text-xs font-mono text-primary/80 mb-3 leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-300">{p.stack}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">{p.desc}</p>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none transition-opacity duration-300" />
             </div>
           ))}
         </div>

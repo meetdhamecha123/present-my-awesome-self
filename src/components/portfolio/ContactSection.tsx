@@ -15,15 +15,15 @@ const ContactSection = () => {
 
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a href="mailto:meetdhamecha82@gmail.com"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-all active:scale-[0.97]">
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-all active:scale-[0.97] animate-pulse-glow">
               <Mail className="w-4 h-4" /> Email Me
             </a>
             <a href="https://github.com/meetdhamecha123" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97]">
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97] hover-lift">
               <Github className="w-4 h-4" /> GitHub
             </a>
             <a href="https://linkedin.com/in/meet-dhamecha-616021236" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97]">
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97] hover-lift">
               <Linkedin className="w-4 h-4" /> LinkedIn
             </a>
           </div>

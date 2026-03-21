@@ -4,7 +4,6 @@ import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 const stats = [
   { value: "2+", label: "Years Exp." },
   { value: "14", label: "Projects" },
-  { value: "500K+", label: "Records/Week" },
   { value: "80%", label: "Cost Saved" },
 ];
 
@@ -16,6 +15,8 @@ const HeroSection = () => {
         backgroundImage: "linear-gradient(hsl(var(--primary) / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.5) 1px, transparent 1px)",
         backgroundSize: "60px 60px",
       }} />
+      <div className="animated-orb w-72 h-72 bg-primary/35 -top-16 -left-16" />
+      <div className="animated-orb w-80 h-80 bg-amber-200/20 -bottom-24 -right-20" style={{ animationDelay: "2s" }} />
 
       <div className="max-w-6xl mx-auto w-full relative z-10">
         <div className="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center">
@@ -75,7 +76,7 @@ const HeroSection = () => {
 
           {/* Profile image */}
           <div className="opacity-0 animate-fade-in hidden md:block" style={{ animationDelay: "200ms" }}>
-            <div className="relative">
+            <div className="relative animate-float-slow">
               <div className="w-72 h-72 rounded-2xl overflow-hidden glow ring-1 ring-border">
                 <img src={profileImg} alt="Meet Dhamecha" className="w-full h-full object-cover" />
               </div>

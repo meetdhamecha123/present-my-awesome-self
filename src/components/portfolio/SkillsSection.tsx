@@ -16,7 +16,7 @@ const skillGroups = [
   },
   {
     title: "Data Science & ML",
-    skills: ["Pandas", "NumPy", "Scikit-learn", "XGBoost", "Matplotlib", "Seaborn", "Plotly", "SHAP"],
+    skills: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly"],
   },
   {
     title: "Databases",
@@ -54,8 +54,9 @@ const SkillsSection = () => {
               style={{ animationDelay: `${(i + 1) * 80}ms` }}>
               <h3 className="text-sm font-mono text-primary uppercase tracking-wider mb-3">{group.title}</h3>
               <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span key={skill} className="px-3 py-1.5 text-xs font-medium rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default">
+                {group.skills.map((skill, idx) => (
+                  <span key={skill} className={`px-3 py-1.5 text-xs font-medium rounded-md bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200 cursor-default hover-lift ${isVisible ? "animate-scale-fade" : "opacity-0"}`}
+                    style={{ animationDelay: `${(i + 1) * 80 + idx * 40}ms` }}>
                     {skill}
                   </span>
                 ))}

@@ -48,7 +48,7 @@ const ExperienceSection = () => {
             <div key={exp.company}
               className={`relative pl-8 border-l-2 border-border ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${(i + 1) * 120}ms` }}>
-              <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+              <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background hover-lift group" />
               <div className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-4 mb-2">
                 <h3 className="text-xl font-semibold">{exp.title}</h3>
                 <span className="text-sm text-muted-foreground">@ {exp.company} · {exp.location}</span>
